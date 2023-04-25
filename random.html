@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Background Color</title>
+	<style>
+		body {
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+	</style>
+	<script>
+		function changeBackgroundColor() {
+			// 16진수 색상 코드를 랜덤으로 생성
+			var hexCode = "#" + Math.floor(Math.random()*16777215).toString(16);
+			// body의 배경 색상 변경
+			document.body.style.backgroundColor = hexCode;
+		}
+
+		window.addEventListener('click', function() {
+			changeBackgroundColor();
+		});
+	</script>
+</head>
+<body>
+	<h1>누르다!</h1>
+</body>
+</html>
